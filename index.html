@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sunset">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Battle Royal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="assets/img/play.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/font.css" />
+  </head>
+  <body>
+    <main
+      class="min-h-screen bg-no-repeat bg-center font-comicSans"
+      style="background-image: url(assets/img/background.png)"
+    >
+      <section id="landing-page" class="">
+        <div
+          class="flex min-h-screen flex-col justify-center items-center text-white gap-5"
+        >
+          <h1 class="text-8xl font-protestGuerrilla font-black uppercase">
+            Keyboard Battle Royal
+          </h1>
+          <p class="text-3xl font-medium">
+            Unleash Your Keyboard skill: press the button bellow
+          </p>
+          <button
+            id="play-now-btn"
+            class="btn bg-white text-black hover:bg-[#696969] border-0"
+          >
+            Play Now
+          </button>
+        </div>
+      </section>
+
+      <section id="play-ground" class="hidden">
+        <div class="flex flex-col items-center gap-5">
+          <div>
+            <div
+              class="artboard artboard-horizontal phone-4 bg-[#FFFFFFB3] border-[15px] border-[#010313CC] rounded-2xl"
+            >
+              <div class="text-white font-medium flex justify-center p-3">
+                <p
+                  class="bg-[#010313CC] px-3 py-1 rounded-full hover:scale-100 scale-90 transition-transform duration-300"
+                >
+                  Don't Watch Keyboard While Playing
+                </p>
+              </div>
+              <div class="flex justify-center items-center h-full">
+                <p
+                  id="generated-random-letter"
+                  class="text-black text-9xl font-black mb-24 uppercase"
+                >
+                  Y
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="uppercase">
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd" id="q">q</kbd>
+              <kbd class="kbd" id="w">w</kbd>
+              <kbd class="kbd" id="e">e</kbd>
+              <kbd class="kbd" id="r">r</kbd>
+              <kbd class="kbd" id="t">t</kbd>
+              <kbd class="kbd" id="y">y</kbd>
+              <kbd class="kbd" id="u">u</kbd>
+              <kbd class="kbd" id="i">i</kbd>
+              <kbd class="kbd" id="o">o</kbd>
+              <kbd class="kbd" id="p">p</kbd>
+            </div>
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd" id="a">a</kbd>
+              <kbd class="kbd" id="s">s</kbd>
+              <kbd class="kbd" id="d">d</kbd>
+              <kbd class="kbd" id="f">f</kbd>
+              <kbd class="kbd" id="g">g</kbd>
+              <kbd class="kbd" id="h">h</kbd>
+              <kbd class="kbd" id="j">j</kbd>
+              <kbd class="kbd" id="k">k</kbd>
+              <kbd class="kbd" id="l">l</kbd>
+            </div>
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd" id="z">z</kbd>
+              <kbd class="kbd" id="x">x</kbd>
+              <kbd class="kbd" id="c">c</kbd>
+              <kbd class="kbd" id="v">v</kbd>
+              <kbd class="kbd" id="b">b</kbd>
+              <kbd class="kbd" id="n">n</kbd>
+              <kbd class="kbd" id="m">m</kbd>
+              <kbd class="kbd" id="/">/</kbd>
+            </div>
+          </div>
+
+          <div class="flex justify-around w-full">
+            <button class="rounded-full btn bg-purple-500 text-white">
+              life
+              <img src="assets/img/hearts.svg" alt="" />
+              <span id="life">5</span>
+            </button>
+            <button class="btn rounded-full bg-[#360490] text-white">
+              Score
+              <img src="assets/img/dollar.svg" alt="" />
+              <span id="score">0</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="score-board" class="hidden">
+        <div
+          class="flex flex-col min-h-screen gap-5 justify-center items-center text-white"
+        >
+          <h2 class="text-3xl uppercase font-black">Game Over!</h2>
+          <div id="score-card text-xl font-black">
+            Score: <span id="score-count">14</span>
+          </div>
+          <button id="play-again-btn" class="btn bg-white text-black border-0">Play Again</button>
+          <p>Practice will me you a pro</p>
+        </div>
+      </section>
+    </main>
+    <script src="js/utility.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
